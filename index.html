@@ -1,1354 +1,1459 @@
 <!DOCTYPE html>
+
 <!-- saved from url=(0071)file:///C:/Users/jhozm/Downloads/cv-nicolas-mayr-listo%20trabajado.html -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicolás Mayr - CV</title>
+<link rel="stylesheet" href="./Nicolás Mayr - CV_files/all.min.css">
+<link rel="stylesheet" href="./Nicolás Mayr - CV_files/css2">
+<style>
+    :root {
+        --primary-color: #1a4c72;
+        --secondary-color: #2980b9;
+        --accent-color: #3498db;
+        --light-color: #ecf0f1;
+        --dark-color: #2c3e50;
+        --text-color: #333;
+        --text-light: #666;
+        --text-white: #ffffff;
+        --shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        --border-radius: 4px;
+    }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolás Mayr - CV</title>
-    <link rel="stylesheet" href="./Nicolás Mayr - CV_files/all.min.css">
-    <link rel="stylesheet" href="./Nicolás Mayr - CV_files/css2">
-    <style>
-        :root {
-            --primary-color: #1a4c72;
-            --secondary-color: #2980b9;
-            --accent-color: #3498db;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --text-light: #666;
-            --text-white: #ffffff;
-            --shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            --border-radius: 4px;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    body {
+        background-color: #f5f5f5;
+        color: var(--text-color);
+        font-family: 'Roboto', Arial, sans-serif;
+        line-height: 1.6;
+    }
 
-        body {
-            background-color: #f5f5f5;
-            color: var(--text-color);
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-        }
+    .cv-container {
+        max-width: 210mm;
+        margin: 20px auto;
+        background: white;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+    }
 
+    .language-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 100;
+        display: flex;
+        gap: 10px;
+    }
+
+    .language-toggle button {
+        padding: 5px 10px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .language-toggle button:hover,
+    .language-toggle button.active {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+
+    .cv-header {
+        background: var(--primary-color);
+        color: var(--text-white);
+        padding: 30px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .cv-header-left {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .cv-footer {
+        text-align: center;
+        padding: 15px 20px;
+        background-color: var(--primary-color);
+        color: var(--text-white);
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .cv-header-right {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: var(--shadow);
+    }
+
+    .cv-body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .left-column {
+        width: 30%;
+        background: var(--light-color);
+        padding: 30px 20px;
+    }
+
+    .right-column {
+        width: 70%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin: 25px 0 15px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 15px;
+        color: var(--secondary-color);
+    }
+
+    .contact-details {
+        margin-top: 20px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    .contact-item i {
+        width: 25px;
+        margin-right: 10px;
+        color: var(--primary-color);
+    }
+
+    .language-item, .skill-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Vertically align items for better look */
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    .language-level, .skill-level {
+        width: 120px;
+        height: 8px;
+        background-color: #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        /* margin-top: 7px; Removed to rely on align-items */
+    }
+
+    .level-bar {
+        height: 100%;
+        background-color: var(--primary-color);
+    }
+
+    .native { width: 100%; }
+    .fluent { width: 90%; }
+    .intermediate { width: 60%; }
+    .basic { width: 40%; }
+
+    .expert { width: 95%; }
+    .advanced { width: 85%; }
+    .competent { width: 75%; }
+    .skilled { width: 65%; }
+
+    .experience-item {
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: -40px; /* Adjusted for right-column padding */
+        top: 5px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        border: 3px solid white; /* Use white for contrast with column background */
+    }
+
+    .right-column .timeline-dot { /* Ensure dot is against right column bg */
+         border: 3px solid white;
+    }
+    .left-column .timeline-dot { /* If used in left column, adjust border */
+         border: 3px solid var(--light-color);
+    }
+
+
+    .job-title {
+        font-weight: 700;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .company {
+        font-style: italic;
+        margin: 5px 0;
+        font-size: 16px;
+        color: var(--text-light);
+    }
+
+    .date {
+        font-size: 15px;
+        font-weight: 500;
+        background-color: var(--accent-color);
+        color: white;
+        padding: 3px 10px;
+        border-radius: var(--border-radius);
+        display: inline-block;
+        white-space: nowrap; /* Prevent date from wrapping */
+    }
+
+    .job-details {
+        margin: 10px 0 0 0;
+        list-style-type: none;
+        padding-left: 0; /* Remove default padding if using custom bullets */
+    }
+
+    .job-details li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+    .job-details li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .education-item {
+        margin-bottom: 20px;
+    }
+
+    .language-content {
+        display: none;
+    }
+
+    .language-content.active {
+        display: block;
+    }
+
+    .de-lang.language-content.active { /* Ensure German active content is displayed */
+        display: block;
+    }
+    .de-lang.language-content { /* Ensure German inactive content is hidden */
+        display: none;
+    }
+
+    .job-title-text {
+        flex: 1;
+        margin-right: 10px; /* Space between title and date */
+    }
+
+    /* References styling */
+    .references-section {
+        margin-top: 30px;
+        padding: 0 30px; /* Match right-column padding */
+    }
+    .references-section h2 {
+        margin-top: 0; /* Remove extra top margin for references section */
+    }
+    .reference-item {
+        margin-bottom: 15px;
+        padding-left: 15px;
+        position: relative;
+    }
+    .reference-item .company { /* Reusing company class for reference details */
+        font-style: normal; /* Remove italic */
+        font-weight: normal; /* Remove bold */
+        color: var(--text-color); /* Restore default text color */
+        font-size: 13px;
+        margin: 2px 0;
+    }
+    .reference-item .company span {
+        display: block; /* Ensure email and phone are on new lines */
+    }
+    .reference-item .company a { /* Style links for email/phone */
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    .reference-item .company a:hover {
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
         .cv-container {
-            max-width: 210mm;
-            margin: 20px auto;
-            background: white;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .language-toggle {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 100;
-            display: flex;
-            gap: 10px;
-        }
-
-        .language-toggle button {
-            padding: 5px 10px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .language-toggle button:hover,
-        .language-toggle button.active {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
+            max-width: 100%;
+            margin: 0;
+            box-shadow: none;
         }
 
         .cv-header {
-            background: var(--primary-color);
-            color: var(--text-white);
-            padding: 30px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            position: relative;
-        }
-
-        .cv-header-left {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .cv-footer {
+            flex-direction: column;
             text-align: center;
-            padding: 15px 20px;
-            background-color: var(--primary-color);
-            color: var(--text-white);
-            font-size: 14px;
-            margin-top: 20px;
+            padding: 20px;
         }
 
         .cv-header-right {
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
+            margin: 20px 0 0 0;
+            justify-content: center;
         }
 
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: var(--shadow);
+        .left-column, .right-column {
+            width: 100%;
+        }
+
+        .experience-item {
+            padding-left: 25px; /* Keep space for timeline dot */
+        }
+
+        .timeline-dot {
+            left: 0;
+        }
+        .references-section {
+            padding: 0 15px; /* Adjust padding for smaller screens */
+        }
+    }
+
+    /* Ajustes mejorados para impresión */
+    @page {
+        size: letter; /* Específicamente tamaño carta (8.5" x 11") */
+        margin: 0.5cm; /* Márgenes reducidos pero consistentes */
+    }
+
+    @media print {
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: white !important;
+            font-size: 10pt;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .cv-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            box-shadow: none;
+            overflow: visible;
+            border: none;
+            page-break-inside: avoid; /* Evita saltos de página dentro del contenedor */
+        }
+
+        .language-toggle {
+            display: none !important;
+        }
+
+        .cv-header {
+            background-color: var(--primary-color) !important;
+            color: var(--text-white) !important;
+            padding: 15px;
+            page-break-after: avoid; /* Evita que haya un salto de página después del encabezado */
+            break-inside: avoid;
+        }
+
+        .cv-footer {
+            background-color: var(--primary-color) !important;
+            color: var(--text-white) !important;
+            padding: 8px 15px;
+            font-size: 8pt;
+            margin-top: 10px;
+            page-break-before: avoid; /* Evita salto de página antes del footer */
         }
 
         .cv-body {
-            display: flex;
-            flex-wrap: wrap;
+            display: flex !important;
+            flex-wrap: nowrap !important; /* Mantiene las columnas lado a lado */
+            page-break-inside: avoid; /* Intenta evitar saltos de página dentro del cuerpo */
         }
 
         .left-column {
-            width: 30%;
-            background: var(--light-color);
-            padding: 30px 20px;
+            width: 30% !important;
+            background-color: var(--light-color) !important;
+            padding: 15px 10px;
+            page-break-inside: avoid; /* Intenta evitar saltos de página dentro de la columna izquierda */
         }
 
         .right-column {
-            width: 70%;
-            padding: 30px;
+            width: 70% !important;
+            padding: 15px 10px;
+        }
+
+        .profile-img {
+            width: 90px; /* Imagen más pequeña para impresión */
+            height: 90px;
+            border: 3px solid white !important;
         }
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
+            font-size: 18pt;
+            margin-bottom: 2px;
         }
 
         h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 25px 0 15px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary-color);
+            font-size: 13pt;
+            margin: 12px 0 6px 0;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid var(--primary-color) !important;
+            color: var(--primary-color) !important;
+            page-break-after: avoid;
+            break-inside: avoid;
         }
 
         h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            margin-top: 15px;
-            color: var(--secondary-color);
+            font-size: 11pt;
+            margin-top: 8px;
+            color: var(--secondary-color) !important;
+            page-break-after: avoid;
+            break-inside: avoid;
         }
 
-        .contact-details {
-            margin-top: 20px;
+        .contact-details, .language-item, .skill-item {
+            break-inside: avoid;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
-
-        .contact-item i {
-            width: 25px;
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-
-        .language-item, .skill-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center; /* Vertically align items for better look */
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
-
-        .language-level, .skill-level {
-            width: 120px;
-            height: 8px;
-            background-color: #ddd;
-            border-radius: 4px;
-            overflow: hidden;
-            /* margin-top: 7px; Removed to rely on align-items */
-        }
-
-        .level-bar {
-            height: 100%;
-            background-color: var(--primary-color);
-        }
-
-        .native { width: 100%; }
-        .fluent { width: 90%; }
-        .intermediate { width: 60%; }
-        .basic { width: 40%; }
-
-        .expert { width: 95%; }
-        .advanced { width: 85%; }
-        .competent { width: 75%; }
-        .skilled { width: 65%; }
-
-        .experience-item {
-            margin-bottom: 25px;
+        .experience-item, .education-item {
+            break-inside: avoid;
+            margin-bottom: 8px; /* Margen reducido */
+            padding-left: 20px; /* Espacio para el punto de la línea de tiempo */
             position: relative;
         }
 
         .timeline-dot {
-            position: absolute;
-            left: -40px; /* Adjusted for right-column padding */
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            border: 3px solid white; /* Use white for contrast with column background */
+            width: 8px;
+            height: 8px;
+            left: 0;
+            top: 4px;
+            background-color: var(--primary-color) !important;
+            border: 2px solid white !important;
         }
 
-        .right-column .timeline-dot { /* Ensure dot is against right column bg */
-             border: 3px solid white;
-        }
-        .left-column .timeline-dot { /* If used in left column, adjust border */
-             border: 3px solid var(--light-color);
+        .right-column .timeline-dot {
+             border: 2px solid white !important;
         }
 
+        .left-column .timeline-dot {
+             border: 2px solid var(--light-color) !important;
+        }
 
         .job-title {
-            font-weight: 700;
-            font-size: 18px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
+            font-size: 10pt;
         }
 
         .company {
-            font-style: italic;
-            margin: 5px 0;
-            font-size: 16px;
-            color: var(--text-light);
+            font-size: 9pt;
+            margin: 2px 0;
         }
 
         .date {
-            font-size: 15px;
-            font-weight: 500;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 3px 10px;
-            border-radius: var(--border-radius);
-            display: inline-block;
-            white-space: nowrap; /* Prevent date from wrapping */
+            font-size: 8pt;
+            padding: 2px 6px;
+            background-color: var(--accent-color) !important;
+            color: white !important;
         }
 
         .job-details {
-            margin: 10px 0 0 0;
-            list-style-type: none;
-            padding-left: 0; /* Remove default padding if using custom bullets */
+            margin-top: 5px;
+            padding-left: 0;
         }
 
         .job-details li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-            font-size: 15px;
+            font-size: 8.5pt;
+            margin-bottom: 3px;
+            line-height: 1.3;
+            padding-left: 15px; /* Espacio para viñeta personalizada */
         }
 
         .job-details li:before {
-            content: "•";
-            position: absolute;
             left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
+            color: var(--primary-color) !important;
         }
 
-        .education-item {
-            margin-bottom: 20px;
+        .contact-item, .language-item, .skill-item {
+            font-size: 9pt;
+            margin-bottom: 4px;
         }
 
-        .language-content {
-            display: none;
+        .language-level, .skill-level {
+            width: 80px;
+            height: 6px;
+            margin-top: 3px;
         }
 
+        .level-bar {
+            background-color: var(--primary-color) !important;
+        }
+
+        p, ul, ol, dl {
+            orphans: 3; /* Mínimo de líneas al final de página */
+            widows: 3;  /* Mínimo de líneas al inicio de nueva página */
+            margin-bottom: 3px; /* Margen general reducido */
+        }
+
+        ul {
+            padding-left: 15px; /* Sangría estándar para listas */
+        }
+
+        /* Asegura que el contenido del idioma activo se muestre para impresión */
         .language-content.active {
-            display: block;
+            display: block !important;
         }
 
-        .de-lang.language-content.active { /* Ensure German active content is displayed */
-            display: block;
+        /* Oculta explícitamente otros contenidos de idioma para impresión */
+        .language-content:not(.active) {
+            display: none !important;
         }
-        .de-lang.language-content { /* Ensure German inactive content is hidden */
-            display: none;
-        }
+    }
+</style>
 
-        .job-title-text {
-            flex: 1;
-            margin-right: 10px; /* Space between title and date */
-        }
-
-        @media screen and (max-width: 768px) {
-            .cv-container {
-                max-width: 100%;
-                margin: 0;
-                box-shadow: none;
-            }
-
-            .cv-header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-
-            .cv-header-right {
-                margin: 20px 0 0 0;
-                justify-content: center;
-            }
-
-            .left-column, .right-column {
-                width: 100%;
-            }
-
-            .experience-item {
-                padding-left: 25px; /* Keep space for timeline dot */
-            }
-
-            .timeline-dot {
-                left: 0;
-            }
-        }
-
-        /* Ajustes mejorados para impresión */
-        @page {
-            size: letter; /* Específicamente tamaño carta (8.5" x 11") */
-            margin: 0.5cm; /* Márgenes reducidos pero consistentes */
-        }
-
-        @media print {
-            html, body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                background: white !important;
-                font-size: 10pt;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            .cv-container {
-                width: 100%;
-                max-width: 100%;
-                margin: 0 auto;
-                padding: 0;
-                box-shadow: none;
-                overflow: visible;
-                border: none;
-                page-break-inside: avoid; /* Evita saltos de página dentro del contenedor */
-            }
-
-            .language-toggle {
-                display: none !important;
-            }
-
-            .cv-header {
-                background-color: var(--primary-color) !important;
-                color: var(--text-white) !important;
-                padding: 15px;
-                page-break-after: avoid; /* Evita que haya un salto de página después del encabezado */
-                break-inside: avoid;
-            }
-
-            .cv-footer {
-                background-color: var(--primary-color) !important;
-                color: var(--text-white) !important;
-                padding: 8px 15px;
-                font-size: 8pt;
-                margin-top: 10px;
-                page-break-before: avoid; /* Evita salto de página antes del footer */
-            }
-
-            .cv-body {
-                display: flex !important;
-                flex-wrap: nowrap !important; /* Mantiene las columnas lado a lado */
-                page-break-inside: avoid; /* Intenta evitar saltos de página dentro del cuerpo */
-            }
-
-            .left-column {
-                width: 30% !important;
-                background-color: var(--light-color) !important;
-                padding: 15px 10px;
-                page-break-inside: avoid; /* Intenta evitar saltos de página dentro de la columna izquierda */
-            }
-
-            .right-column {
-                width: 70% !important;
-                padding: 15px 10px;
-            }
-
-            .profile-img {
-                width: 90px; /* Imagen más pequeña para impresión */
-                height: 90px;
-                border: 3px solid white !important;
-            }
-
-            h1 {
-                font-size: 18pt;
-                margin-bottom: 2px;
-            }
-
-            h2 {
-                font-size: 13pt;
-                margin: 12px 0 6px 0;
-                padding-bottom: 5px;
-                border-bottom: 1.5px solid var(--primary-color) !important;
-                color: var(--primary-color) !important;
-                page-break-after: avoid;
-                break-inside: avoid;
-            }
-
-            h3 {
-                font-size: 11pt;
-                margin-top: 8px;
-                color: var(--secondary-color) !important;
-                page-break-after: avoid;
-                break-inside: avoid;
-            }
-
-            .contact-details, .language-item, .skill-item {
-                break-inside: avoid;
-            }
-
-            .experience-item, .education-item {
-                break-inside: avoid;
-                margin-bottom: 8px; /* Margen reducido */
-                padding-left: 20px; /* Espacio para el punto de la línea de tiempo */
-                position: relative;
-            }
-
-            .timeline-dot {
-                width: 8px;
-                height: 8px;
-                left: 0;
-                top: 4px;
-                background-color: var(--primary-color) !important;
-                border: 2px solid white !important;
-            }
-
-            .right-column .timeline-dot {
-                 border: 2px solid white !important;
-            }
-
-            .left-column .timeline-dot {
-                 border: 2px solid var(--light-color) !important;
-            }
-
-            .job-title {
-                font-size: 10pt;
-            }
-
-            .company {
-                font-size: 9pt;
-                margin: 2px 0;
-            }
-
-            .date {
-                font-size: 8pt;
-                padding: 2px 6px;
-                background-color: var(--accent-color) !important;
-                color: white !important;
-            }
-
-            .job-details {
-                margin-top: 5px;
-                padding-left: 0;
-            }
-
-            .job-details li {
-                font-size: 8.5pt;
-                margin-bottom: 3px;
-                line-height: 1.3;
-                padding-left: 15px; /* Espacio para viñeta personalizada */
-            }
-
-            .job-details li:before {
-                left: 0;
-                color: var(--primary-color) !important;
-            }
-
-            .contact-item, .language-item, .skill-item {
-                font-size: 9pt;
-                margin-bottom: 4px;
-            }
-
-            .language-level, .skill-level {
-                width: 80px;
-                height: 6px;
-                margin-top: 3px;
-            }
-
-            .level-bar {
-                background-color: var(--primary-color) !important;
-            }
-
-            p, ul, ol, dl {
-                orphans: 3; /* Mínimo de líneas al final de página */
-                widows: 3;  /* Mínimo de líneas al inicio de nueva página */
-                margin-bottom: 3px; /* Margen general reducido */
-            }
-
-            ul {
-                padding-left: 15px; /* Sangría estándar para listas */
-            }
-
-            /* Asegura que el contenido del idioma activo se muestre para impresión */
-            .language-content.active {
-                display: block !important;
-            }
-
-            /* Oculta explícitamente otros contenidos de idioma para impresión */
-            .language-content:not(.active) {
-                display: none !important;
-            }
-        }
-    </style>
 </head>
 <body>
-    <div class="cv-container">
-        <div class="language-toggle">
-            <button id="btn-es" class="active">Español</button>
-            <button id="btn-en">English</button>
-            <button id="btn-de">Deutsch</button>
+<div class="cv-container">
+<div class="language-toggle">
+<button id="btn-es" class="active">Español</button>
+<button id="btn-en">English</button>
+<button id="btn-de">Deutsch</button>
+</div>
+<!-- Header Section -->
+    <header class="cv-header">
+        <div class="cv-header-left">
+            <h1>Nicolás Mayr</h1>
+            <p class="es-lang language-content active">Politólogo experto en análisis político, especializado en Coordinación Humanitaria, Construcción de Paz y Desarrollo Local</p>
+            <p class="en-lang language-content">Political Scientist expert in political analysis, specialized in Humanitarian Coordination, Peacebuilding and Local Development</p>
+            <p class="de-lang language-content">Politikwissenschaftler, Experte für politische Analyse, spezialisiert auf humanitäre Koordination, Friedenskonsolidierung und lokale Entwicklung</p>
         </div>
-
-        <!-- Header Section -->
-        <header class="cv-header">
-            <div class="cv-header-left">
-                <h1>Nicolás Mayr</h1>
-                <p class="es-lang language-content active">Politólogo experto en análisis político, especializado en Coordinación Humanitaria, Construcción de Paz y Desarrollo Local</p>
-                <p class="en-lang language-content">Political Scientist expert in political analysis, specialized in Humanitarian Coordination, Peacebuilding and Local Development</p>
-                <p class="de-lang language-content">Politikwissenschaftler, Experte für politische Analyse, spezialisiert auf humanitäre Koordination, Friedenskonsolidierung und lokale Entwicklung</p>
-            </div>
-            <div class="cv-header-right">
-                <img class="profile-img" src="https://images4.imagebam.com/c5/97/9d/ME11UR2W_o.jpg" alt="Nicolás Mayr profile photo">
-            </div>
-        </header>
-
-        <div class="cv-body">
-            <!-- Left Column -->
-            <div class="left-column">
-                <h2 class="es-lang language-content active">Perfil</h2>
-                <h2 class="en-lang language-content">Profile</h2>
-                <h2 class="de-lang language-content">Profil</h2>
-
-                <div class="es-lang language-content active">
-                    <p>Politólogo con más de 19 años de experiencia, con experticia en análisis político, coordinación humanitaria e interinstitucional, construcción de paz y desarrollo local. Especialista en articulación entre comunidades indígenas/campesinas e instituciones gubernamentales, con enfoque en negociación, mediación y procesos multinivel. Amplia experiencia en la gestión de crisis humanitarias, evaluación de necesidades y creación de plataformas de coordinación interagencial en contextos de conflicto.</p>
-                </div>
-
-                <div class="en-lang language-content">
-                    <p>Political scientist with over 19 years of experience, with expertise in political analysis, humanitarian and inter-institutional coordination, peacebuilding, and local development. Specialist in articulation between indigenous/rural communities and government institutions, with a focus on negotiation, mediation, and multilevel processes. Extensive experience in humanitarian crisis management, needs assessment, and creation of interagency coordination platforms in conflict contexts.</p>
-                </div>
-
-                <div class="de-lang language-content">
-                    <p>Politikwissenschaftler mit über 19 Jahren Erfahrung, mit Expertise in politischer Analyse, humanitärer und interinstitutioneller Koordination, Friedenskonsolidierung und lokaler Entwicklung. Spezialist für die Artikulation zwischen indigenen/ländlichen Gemeinschaften und staatlichen Institutionen, mit Schwerpunkt auf Verhandlung, Vermittlung und Prozessen auf mehreren Ebenen. Umfangreiche Erfahrung im Management humanitärer Krisen, Bedarfsermittlung und Schaffung behördenübergreifender Koordinationsplattformen in Konfliktkontexten.</p>
-                </div>
-
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Bogotá, Colombia</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-birthday-cake"></i>
-                        <span>31/10/1977</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>+573205271621</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>nicomayro@gmail.com</span>
-                    </div>
-                </div>
-
-                <h2 class="es-lang language-content active">Idiomas</h2>
-                <h2 class="en-lang language-content">Languages</h2>
-                <h2 class="de-lang language-content">Sprachen</h2>
-
-                <div class="es-lang language-content active">
-                    <div class="language-item">
-                        <span><strong>Español:</strong> Nativo</span>
-                        <div class="language-level"><div class="level-bar native"></div></div>
-                    </div>
-                    <div class="language-item">
-                        <span><strong>Inglés:</strong> Fluido</span>
-                        <div class="language-level"><div class="level-bar fluent"></div></div>
-                    </div>
-                    <div class="language-item">
-                        <span><strong>Alemán:</strong> Fluido</span>
-                        <div class="language-level"><div class="level-bar fluent"></div></div>
-                    </div>
-                </div>
-
-                <div class="en-lang language-content">
-                    <div class="language-item">
-                        <span><strong>Spanish:</strong> Native</span>
-                        <div class="language-level"><div class="level-bar native"></div></div>
-                    </div>
-                    <div class="language-item">
-                        <span><strong>English:</strong> Fluent</span>
-                        <div class="language-level"><div class="level-bar fluent"></div></div>
-                    </div>
-                    <div class="language-item">
-                        <span><strong>German:</strong> Fluent</span>
-                        <div class="language-level"><div class="level-bar fluent"></div></div>
-                    </div>
-                </div>
-
-                <div class="de-lang language-content">
-                    <div class="language-item">
-                        <span><strong>Spanisch:</strong> Muttersprache</span>
-                        <div class="language-level"><div class="level-bar native"></div></div>
-                    </div>
-                    <div class="language-item">
-                        <span><strong>Englisch:</strong> Fließend</span>
-                        <div class="language-level"><div class="level-bar fluent"></div></div>
-                    </div>
-                    <div class="language-item">
-                        <span><strong>Deutsch:</strong> Fließend</span>
-                        <div class="language-level"><div class="level-bar fluent"></div></div>
-                    </div>
-                </div>
-
-                <h2 class="es-lang language-content active">Habilidades</h2>
-                <h2 class="en-lang language-content">Skills</h2>
-                <h2 class="de-lang language-content">Fähigkeiten</h2>
-
-                <div class="es-lang language-content active">
-                    <div class="skill-item">
-                        <span>Coordinación Humanitaria</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Análisis y Resolución de Conflictos</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Analista socio político del contexto latinoamericano, con especial énfasis en Colombia y Venezuela</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Cooperación Internacional</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Diplomacia Humanitaria</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Respuesta a Emergencias</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Gestión de Oficinas de Campo</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Evaluación de Necesidades</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Negociación con Comunidades</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Articulación Institucional</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Construcción de Paz</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Desarrollo Local</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                </div>
-
-                <div class="en-lang language-content">
-                    <div class="skill-item">
-                        <span>Humanitarian Coordination</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Conflict Analysis and Resolution</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Analyst of the socio-political context in Latin America, with special emphasis on Colombia and Venezuela</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                     <div class="skill-item">
-                        <span>International Cooperation</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Humanitarian Diplomacy</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Emergency Response</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Field Office Management</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Needs Assessment</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Community Negotiation</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Institutional Articulation</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Peacebuilding</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Local Development</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                </div>
-
-                <div class="de-lang language-content">
-                    <div class="skill-item">
-                        <span>Humanitäre Koordination</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Konfliktanalyse und -lösung</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Analyst für soziopolitische Kontexte in Lateinamerika, mit besonderem Schwerpunkt auf Kolumbien und Venezuela</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Internationale Zusammenarbeit</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Humanitäre Diplomatie</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Notfallmaßnahmen</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Feldbüroverwaltung</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Bedarfsbewertung</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Verhandlung mit Gemeinschaften</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Institutionelle Artikulation</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Friedenskonsolidierung</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Lokale Entwicklung</span>
-                        <div class="skill-level"><div class="level-bar expert"></div></div>
-                    </div>
-                </div>
-
-                <h2 class="es-lang language-content active">Desarrollo Profesional</h2>
-                <h2 class="en-lang language-content">Professional Development</h2>
-                <h2 class="de-lang language-content">Berufliche Weiterbildung</h2>
-
-                <div class="es-lang language-content active">
-                    <ul class="job-details">
-                        <li>Taller UNDAC (Lima, Perú, 2022)</li>
-                        <li>Coordinación a nivel subnacional (Luxemburgo, 2024)</li>
-                        <li>Punto focal de simulación SIMEX (Bogotá, 2016)</li>
-                        <li>Taller CAIM (Antigua, Guatemala, 2016)</li>
-                        <li>Capacitación UN-CMCoord (Ciudad de México, 2011)</li>
-                        <li>Programa de Coordinación Humanitaria en Campo (HFCP) (Jordania, 2009)</li>
-                        <li>Principios Sphera (Cartagena, Colombia, 2006)</li>
-                    </ul>
-                </div>
-
-                <div class="en-lang language-content">
-                    <ul class="job-details">
-                        <li>UNDAC Workshop (Lima, Peru, 2022)</li>
-                        <li>Coordination at subnational level (Luxembourg, 2024)</li>
-                        <li>SIMEX simulation focal point (Bogotá, 2016)</li>
-                        <li>CAIM Workshop (Antigua, Guatemala, 2016)</li>
-                        <li>UN-CMCoord training (Mexico City, 2011)</li>
-                        <li>Humanitarian Field Coordination Program (HFCP) (Jordan, 2009)</li>
-                        <li>Sphera principles (Cartagena, Colombia, 2006)</li>
-                    </ul>
-                </div>
-                <div class="de-lang language-content">
-                    <ul class="job-details">
-                        <li>UNDAC Workshop (Lima, Peru, 2022)</li>
-                        <li>Koordination auf subnationaler Ebene (Luxemburg, 2024)</li>
-                        <li>SIMEX-Simulationskoordinator (Bogotá, 2016)</li>
-                        <li>CAIM Workshop (Antigua, Guatemala, 2016)</li>
-                        <li>UN-CMCoord Schulung (Mexiko-Stadt, 2011)</li>
-                        <li>Humanitäres Feldkoordinationsprogramm (HFCP) (Jordanien, 2009)</li>
-                        <li>Sphera-Prinzipien (Cartagena, Kolumbien, 2006)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Right Column -->
-            <div class="right-column">
-                <h2 class="es-lang language-content active">Experiencia Laboral</h2>
-                <h2 class="en-lang language-content">Work Experience</h2>
-                <h2 class="de-lang language-content">Arbeitserfahrung</h2>
-
-                <div class="es-lang language-content active">
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Oficial de Asuntos Humanitarios</div>
-                            <span class="date">2020-presente</span>
-                        </div>
-                        <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de suboficina Maracaibo, Venezuela</p>
-                        <ul class="job-details">
-                            <li>Proporcionar análisis político continuo sobre la situación en Venezuela para informar la estrategia humanitaria y la toma de decisiones.</li>
-                            <li>Liderar la coordinación humanitaria en la región, asegurando una coordinación operativa hacia las comunidades más afectadas por la crisis social y política del país, garantizando la implementación efectiva del Plan de Respuesta Humanitaria</li>
-                            <li>Monitorear, analizar y articular con los espacios humanitarios a nivel local y nacional para garantizar una respuesta asertiva a las necesidades humanitarias en el Estado Zulia</li>
-                            <li>Fortalecer relaciones con autoridades locales y militares para mejorar el acceso humanitario y el entorno operativo para actores humanitarios</li>
-                            <li>Gestionar el equipo de campo de OCHA y monitores comunitarios en los estados de la región</li>
-                            <li>Desarrollar informes de análisis completos y productos de información para mejorar las estrategias de respuesta regional</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Oficial Nacional de Coordinación</div>
-                            <span class="date">2014-2020</span>
-                        </div>
-                        <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de la Unidad de coordinación, Bogotá, Colombia</p>
-                        <ul class="job-details">
-                            <li>Liderar el análisis político y de contexto para el Coordinador Humanitario y la oficina, identificando tendencias, riesgos y oportunidades para la acción humanitaria.</li>
-                            <li>Dirigir la Unidad de Coordinación de la oficina y supervisar las oficinas territoriales de OCHA</li>
-                            <li>Proporcionar análisis de situación estratégica y perspectivas políticas al Coordinador Humanitario</li>
-                            <li>Servir como punto focal para desastres naturales y emergencias humanitarias por conflicto, siendo el responsable del relacionamiento con los entes gubernamentales, las comunidades y los socios implementadores</li>
-                            <li>Actuar como enlace articulador entre las instituciones del Estado y las comunidades indígenas y campesinas para generar sinergias que permiten el actuar humanitario en territorios vulnerables</li>
-                            <li>Encargarse desde el lado humanitario, de la articulación entre el tema de migrantes y los desafíos humanitarios en Colombia. Constructor de la estrategia (plataforma nacional) entre temas de migración y humanitarios desde NNUU en el país</li>
-                            <li>Ejercer como jefe de Oficina de OCHA Colombia (e) durante 4 meses en 2019</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Oficial de Asuntos Humanitarios</div>
-                            <span class="date">2011-2013</span>
-                        </div>
-                        <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de suboficina Villavicencio, Colombia</p>
-                        <ul class="job-details">
-                            <li>Realizar análisis político de las dinámicas de conflicto y sociales en el suroriente colombiano para adaptar las estrategias de respuesta humanitaria y construcción de paz.</li>
-                            <li>Realizar la apertura y dirigir nuevas operaciones de oficina de OCHA en el suroriente de Colombia</li>
-                            <li>Crear equipos humanitarios locales en múltiples departamentos para mejorar el análisis y la respuesta a las comunidades afectadas del suroriente colombiano</li>
-                            <li>Proporcionar asistencia y articular con comunidades afectadas por desplazamiento debido al conflicto armado</li>
-                            <li>Generar pedagogías de Paz en comunidades indígenas y campesinas en áreas remotas del Meta y Guaviare, relacionada a los Diálogos entre gobierno y FARC-EP, conjuntamente con la Oficina de Derechos Humanos de las NNUU y la Defensoría del Pueblo</li>
-                            <li>Servir como experto en evaluaciones de necesidades humanitarias en varias comunidades indígenas y campesinas del Meta y Guaviare</li>
-                            <li>Establecer diálogos y enlaces entre entes gubernamentales y comunidades afectadas por el conflicto en el suroriente colombiano para generar acceso a atención humanitaria relevante</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Oficial Nacional de Coordinación</div>
-                            <span class="date">2008-2010</span>
-                        </div>
-                        <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de Suboficina Cartagena, Colombia</p>
-                        <ul class="job-details">
-                            <li>Proveer análisis político y de dinámicas de conflicto en la región Caribe para orientar la coordinación interagencial y las intervenciones humanitarias.</li>
-                            <li>Realizar la apertura y dirigir nuevas operaciones de oficina de OCHA en Bolívar para cubrir los departamentos de Sucre, Bolívar, Atlántico y Magdalena</li>
-                            <li>Coordinar la respuesta Interagencial en regiones afectadas por causa del conflicto armado en el país</li>
-                            <li>Implementar plataformas de coordinación humanitaria para agencias de la ONU en sus primeras fases de creación</li>
-                            <li>Servir como punto focal articulador entre la varias Agencias de la cooperación Internacional y los entes gubernamentales</li>
-                            <li>Realizar evaluaciones de necesidades y misiones de campo apoyando a comunidades vulnerables, especialmente comunidades campesinas de los departamentos de Bolívar y Sucre</li>
-                            <li>Apoyar las jornadas de consultas de paz realizadas en Bolívar y Sucre con comunidades Afrocolombianas, indígenas y campesinas ante escenarios de construcción de paz</li>
-                            <li>Realizar seguimiento y proponer acciones humanitarias de impacto en la región de los Montes de María en sus 14 municipios; zona afectada el conflicto armado en el país</li>
-                            <li>Realizar de la mano de comunidades y autoridades de gestión de riesgo, evaluaciones de necesidades y propuestas para canastas de recursos de las Naciones Unidas para implementar medidas de mitigación e impacto ante las emergencias crónicas por inundaciones en la Mojana sucreña</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Asistente de Coordinación Humanitaria</div>
-                            <span class="date">2005-2008</span>
-                        </div>
-                        <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de la suboficina de Barranquilla, Atlántico</p>
-                        <ul class="job-details">
-                            <li>Contribuir con análisis político inicial del contexto de la costa norte para el establecimiento de operaciones de OCHA y la interacción con actores clave.</li>
-                            <li>Abrir la primera oficina de OCHA en la costa norte del país, en Barranquilla como Voluntario de la ONU para iniciar las operaciones de OCHA en esa parte del país</li>
-                            <li>Coordinar el inicio del trabajo humanitarios Interagencial de la ONU en el norte de Colombia</li>
-                            <li>Realizar, en las comunidades indígenas de la Sierra Nevada de Santa Marta, iniciativas y acuerdos entre las comunidades y la cooperación internacional para llevar a cabo un diagnóstico humanitario y generar acciones humanitarias con un impacto positivo en los pueblos Kogui-Wiwas-Kankuamos y Arhuacos</li>
-                            <li>Realizar un trabajo amplio de acompañamiento a los cuatro pueblos indígenas de la SNSM y generar sinergias y articulaciones entre éstos y los entes de gobierno para generar una respuesta ante temas de construcción de paz, desarrollo sostenible y asistencia humanitaria</li>
-                            <li>Monitorear y acompañar las acciones humanitarias en las comunidades que experimentaban desplazamiento a lo largo de la frontera colombo-venezolana, tanto campesinas como indígenas</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="en-lang language-content">
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Humanitarian Affairs Officer</div>
-                            <span class="date">2020-present</span>
-                        </div>
-                        <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Maracaibo Sub-office, Venezuela</p>
-                        <ul class="job-details">
-                            <li>Provide continuous political analysis on the situation in Venezuela to inform humanitarian strategy and decision-making.</li>
-                            <li>Lead humanitarian coordination in the region, ensuring operational coordination for communities most affected by the country's social and political crisis, guaranteeing effective implementation of the Humanitarian Response Plan</li>
-                            <li>Monitor, analyze and articulate with humanitarian spaces at local and national levels to ensure an assertive response to humanitarian needs in Zulia State</li>
-                            <li>Strengthen relationships with local authorities and military to improve humanitarian access and operational environment for humanitarian actors</li>
-                            <li>Manage OCHA field team and community monitors across regional states</li>
-                            <li>Develop comprehensive analysis reports and information products to enhance regional response strategies</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">National Coordination Officer</div>
-                            <span class="date">2014-2020</span>
-                        </div>
-                        <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Coordination Unit, Bogotá, Colombia</p>
-                        <ul class="job-details">
-                            <li>Lead political and contextual analysis for the Humanitarian Coordinator and the office, identifying trends, risks, and opportunities for humanitarian action.</li>
-                            <li>Lead the Coordination Unit of the office and supervise OCHA territorial offices</li>
-                            <li>Provide strategic situation analysis and political perspectives to the Humanitarian Coordinator</li>
-                            <li>Serve as focal point for natural disasters and conflict humanitarian emergencies, responsible for relationships with government entities, communities, and implementing partners</li>
-                            <li>Act as articulating link between State institutions and indigenous and rural communities to generate synergies that enable humanitarian action in vulnerable territories</li>
-                            <li>Manage, from the humanitarian side, the articulation between migrant issues and humanitarian challenges in Colombia. Builder of strategy (national platform) between migration and humanitarian issues from UN in the country</li>
-                            <li>Serve as OCHA Colombia Head of Office (acting) for 4 months in 2019</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Humanitarian Affairs Officer</div>
-                            <span class="date">2011-2013</span>
-                        </div>
-                        <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Villavicencio Sub-office, Colombia</p>
-                        <ul class="job-details">
-                            <li>Conduct political analysis of conflict and social dynamics in southeastern Colombia to adapt humanitarian response and peacebuilding strategies.</li>
-                            <li>Establish and lead new OCHA office operations in southeastern Colombia</li>
-                            <li>Create local humanitarian teams across multiple departments to enhance analysis and response to affected communities in southeastern Colombia</li>
-                            <li>Provide assistance and articulate with communities affected by displacement due to armed conflict</li>
-                            <li>Generate Peace pedagogies in indigenous and rural communities in remote areas of Meta and Guaviare, related to the Dialogues between government and FARC-EP, jointly with the UN Human Rights Office and the Ombudsman's Office</li>
-                            <li>Serve as expert in humanitarian needs assessments in various indigenous and rural communities of Meta and Guaviare</li>
-                            <li>Establish dialogues and links between government entities and communities affected by conflict in southeastern Colombia to generate access to relevant humanitarian assistance</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">National Coordination Officer</div>
-                            <span class="date">2008-2010</span>
-                        </div>
-                        <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Cartagena Sub-office, Colombia</p>
-                        <ul class="job-details">
-                            <li>Provide political and conflict dynamics analysis in the Caribbean region to guide interagency coordination and humanitarian interventions.</li>
-                            <li>Establish and lead new OCHA office operations in Bolívar to cover the departments of Sucre, Bolívar, Atlántico and Magdalena</li>
-                            <li>Coordinate interagency response in regions affected by armed conflict in the country</li>
-                            <li>Implement humanitarian coordination platforms for UN agencies in their early phases of creation</li>
-                            <li>Serve as articulating focal point between various International Cooperation Agencies and government entities</li>
-                            <li>Conduct needs assessments and field missions supporting vulnerable communities, especially rural communities in the departments of Bolívar and Sucre</li>
-                            <li>Support peace consultation days held in Bolívar and Sucre with Afro-Colombian, indigenous, and rural communities in peacebuilding scenarios</li>
-                            <li>Monitor and propose impactful humanitarian actions in the Montes de María region in its 14 municipalities; area affected by armed conflict in the country</li>
-                            <li>Conduct, together with communities and risk management authorities, needs assessments and proposals for United Nations resource baskets to implement mitigation and impact measures for chronic flood emergencies in Mojana sucreña</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Humanitarian Coordination Assistant</div>
-                            <span class="date">2005-2008</span>
-                        </div>
-                        <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Barranquilla Sub-office, Atlántico</p>
-                        <ul class="job-details">
-                            <li>Contribute with initial political analysis of the northern coast context for the establishment of OCHA operations and interaction with key stakeholders.</li>
-                            <li>Open the first OCHA office on the northern coast of the country in Barranquilla as UN Volunteer to initiate OCHA operations in that part of the country</li>
-                            <li>Coordinate the beginning of UN interagency humanitarian work in northern Colombia</li>
-                            <li>Develop, in the indigenous communities of Sierra Nevada de Santa Marta, initiatives and agreements between communities and international cooperation to conduct a humanitarian diagnosis and generate humanitarian actions with positive impact on Kogui-Wiwas-Kankuamos and Arhuacos peoples</li>
-                            <li>Conduct extensive accompaniment work with the four indigenous peoples of the SNSM and generate synergies and articulations between them and government entities to generate a response to peacebuilding, sustainable development, and humanitarian assistance issues</li>
-                            <li>Monitor and accompany humanitarian actions in communities experiencing displacement along the Colombian-Venezuelan border, both rural and indigenous</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="de-lang language-content">
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Humanitärer Referent</div>
-                            <span class="date">2020-heute</span>
-                        </div>
-                        <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Maracaibo, Venezuela</p>
-                        <ul class="job-details">
-                            <li>Bereitstellung kontinuierlicher politischer Analysen zur Lage in Venezuela zur Information der humanitären Strategie und Entscheidungsfindung.</li>
-                            <li>Humanitäre Koordination in der Region leiten, operative Koordination für die am stärksten von der sozialen und politischen Krise des Landes betroffenen Gemeinschaften sicherstellen und den Humanitären Reaktionsplan effektiv umsetzen</li>
-                            <li>Humanitäre Entwicklungen auf lokaler und nationaler Ebene überwachen, analysieren und artikulieren, um eine durchsetzungsfähige Reaktion auf humanitäre Bedürfnisse im Bundesstaat Zulia zu gewährleisten</li>
-                            <li>Beziehungen zu lokalen Behörden und Militär stärken, um den humanitären Zugang und das operative Umfeld für humanitäre Akteure zu verbessern</li>
-                            <li>OCHA-Feldteam und Community-Monitore in den regionalen Bundesstaaten verwalten</li>
-                            <li>Umfassende Analyseberichte und Informationsprodukte entwickeln, um regionale Reaktionsstrategien zu verbessern</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Nationaler Koordinationsbeauftragter</div>
-                            <span class="date">2014-2020</span>
-                        </div>
-                        <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter der Koordinierungseinheit, Bogotá, Kolumbien</p>
-                        <ul class="job-details">
-                            <li>Leitung politischer und kontextbezogener Analysen für den Humanitären Koordinator und das Büro, Identifizierung von Trends, Risiken und Chancen für humanitäre Maßnahmen.</li>
-                            <li>Die Koordinierungseinheit des Büros leiten und die territorialen OCHA-Büros beaufsichtigen</li>
-                            <li>Strategische Situationsanalyse und politische Perspektiven für den Humanitären Koordinator bereitstellen</li>
-                            <li>Als Anlaufstelle für Naturkatastrophen und humanitäre Konfliktsituationen fungieren, verantwortlich für Beziehungen zu Regierungsbehörden, Gemeinschaften und Durchführungspartnern</li>
-                            <li>Als verbindendes Glied zwischen staatlichen Institutionen und indigenen und ländlichen Gemeinschaften fungieren, um Synergien zu erzeugen, die humanitäres Handeln in gefährdeten Gebieten ermöglichen</li>
-                            <li>Von der humanitären Seite die Artikulation zwischen Migrationsfragen und humanitären Herausforderungen in Kolumbien verwalten. Gestalter der Strategie (nationale Plattform) zwischen Migrations- und humanitären Themen der UN im Land</li>
-                            <li>Als Leiter des OCHA-Büros Kolumbien (amtierend) für 4 Monate im Jahr 2019 fungieren</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Humanitärer Referent</div>
-                            <span class="date">2011-2013</span>
-                        </div>
-                        <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Villavicencio, Kolumbien</p>
-                        <ul class="job-details">
-                            <li>Durchführung politischer Analysen von Konflikt- und Sozialdynamiken im Südosten Kolumbiens zur Anpassung humanitärer Reaktions- und Friedenskonsolidierungsstrategien.</li>
-                            <li>Neue OCHA-Bürooperationen im Südosten Kolumbiens einrichten und leiten</li>
-                            <li>Lokale humanitäre Teams in mehreren Abteilungen schaffen, um Analyse und Reaktion auf betroffene Gemeinschaften im südöstlichen Kolumbien zu verbessern</li>
-                            <li>Hilfestellung leisten und mit Gemeinschaften artikulieren, die von Vertreibung aufgrund bewaffneter Konflikte betroffen sind</li>
-                            <li>Friedenspädagogik in indigenen und ländlichen Gemeinschaften in abgelegenen Gebieten von Meta und Guaviare entwickeln, im Zusammenhang mit den Dialogen zwischen Regierung und FARC-EP, gemeinsam mit dem UN-Menschenrechtsbüro und dem Büro des Ombudsmanns</li>
-                            <li>Als Experte für humanitäre Bedarfsermittlungen in verschiedenen indigenen und ländlichen Gemeinschaften von Meta und Guaviare fungieren</li>
-                            <li>Dialoge und Verbindungen zwischen Regierungsbehörden und von Konflikten betroffenen Gemeinschaften im südöstlichen Kolumbien herstellen, um Zugang zu relevanter humanitärer Hilfe zu ermöglichen</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Nationaler Koordinationsbeauftragter</div>
-                            <span class="date">2008-2010</span>
-                        </div>
-                        <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Cartagena, Kolumbien</p>
-                        <ul class="job-details">
-                            <li>Bereitstellung politischer Analysen und Analysen von Konfliktdynamiken in der Karibikregion zur Steuerung der behördenübergreifenden Koordination und humanitärer Interventionen.</li>
-                            <li>Neue OCHA-Bürooperationen in Bolívar einrichten und leiten, um die Departements Sucre, Bolívar, Atlántico und Magdalena abzudecken</li>
-                            <li>Behördenübergreifende Reaktion in von bewaffneten Konflikten betroffenen Regionen des Landes koordinieren</li>
-                            <li>Humanitäre Koordinationsplattformen für UN-Organisationen in ihren frühen Schaffungsphasen implementieren</li>
-                            <li>Als artikulierender Ansprechpartner zwischen verschiedenen Agenturen der internationalen Zusammenarbeit und Regierungsbehörden fungieren</li>
-                            <li>Bedarfsermittlungen und Feldmissionen zur Unterstützung gefährdeter Gemeinschaften durchführen, insbesondere ländlicher Gemeinschaften in den Departements Bolívar und Sucre</li>
-                            <li>Friedenskonsultationstage in Bolívar und Sucre mit afro-kolumbianischen, indigenen und ländlichen Gemeinschaften in Friedenskonsolidierungsszenarien unterstützen</li>
-                            <li>Humanitäre Maßnahmen mit Wirkung in der Region Montes de María und ihren 14 Gemeinden überwachen und vorschlagen; ein vom bewaffneten Konflikt im Land betroffenes Gebiet</li>
-                            <li>Gemeinsam mit Gemeinschaften und Risikomanagementbehörden Bedarfsermittlungen und Vorschläge für Ressourcenkörbe der Vereinten Nationen durchführen, um Minderungs- und Auswirkungsmaßnahmen für chronische Überschwemmungsnotfälle in der Mojana sucreña umzusetzen</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Humanitärer Koordinationsassistent</div>
-                            <span class="date">2005-2008</span>
-                        </div>
-                        <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Barranquilla, Atlántico</p>
-                        <ul class="job-details">
-                            <li>Beitrag zur initialen politischen Analyse des Kontextes der Nordküste für den Aufbau von OCHA-Operationen und die Interaktion mit Schlüsselakteuren.</li>
-                            <li>Das erste OCHA-Büro an der Nordküste des Landes in Barranquilla als UN-Freiwilliger eröffnen, um OCHA-Operationen in diesem Teil des Landes zu initiieren</li>
-                            <li>Den Beginn der behördenübergreifenden humanitären Arbeit der UN in Nordkolumbien koordinieren</li>
-                            <li>In den indigenen Gemeinschaften der Sierra Nevada de Santa Marta Initiativen und Vereinbarungen zwischen Gemeinschaften und internationaler Zusammenarbeit entwickeln, um eine humanitäre Diagnose durchzuführen und humanitäre Maßnahmen mit positiver Wirkung auf die Völker der Kogui-Wiwas-Kankuamos und Arhuacos zu generieren</li>
-                            <li>Umfangreiche Begleitarbeit mit den vier indigenen Völkern der SNSM durchführen und Synergien und Artikulationen zwischen ihnen und Regierungsbehörden erzeugen, um eine Antwort auf Themen der Friedenskonsolidierung, nachhaltigen Entwicklung und humanitären Hilfe zu generieren</li>
-                            <li>Humanitäre Maßnahmen in Gemeinschaften überwachen und begleiten, die Vertreibung entlang der kolumbianisch-venezolanischen Grenze erleben, sowohl ländlich als auch indigen</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2 class="es-lang language-content active">Educación</h2>
-                <h2 class="en-lang language-content">Education</h2>
-                <h2 class="de-lang language-content">Ausbildung</h2>
-
-                <div class="es-lang language-content active">
-                    <div class="education-item">
-                        <div class="job-title">
-                            <div class="job-title-text">Pontificia Universidad Javeriana, Ciencias Políticas con énfasis en Marketing político</div>
-                            <span class="date">1999-2004</span>
-                        </div>
-                        <p class="company">Colombia</p>
-                        <ul class="job-details">
-                            <li>Mención honorífica por tesis: "La Cruz, Nariño: Un municipio vulnerable afectado por el conflicto interno"</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="job-title">
-                            <div class="job-title-text">Colegio Alemán</div>
-                            <span class="date">1992-1998</span>
-                        </div>
-                        <p class="company">Colombia</p>
-                    </div>
-                </div>
-
-                <div class="en-lang language-content">
-                    <div class="education-item">
-                        <div class="job-title">
-                            <div class="job-title-text">Pontificia Universidad Javeriana, Political Science with emphasis in Political Marketing</div>
-                            <span class="date">1999-2004</span>
-                        </div>
-                        <p class="company">Colombia</p>
-                        <ul class="job-details">
-                            <li>Honorific mention for thesis: "La Cruz, Nariño: A vulnerable municipality affected by the internal conflict"</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="job-title">
-                            <div class="job-title-text">German School</div>
-                            <span class="date">1992-1998</span>
-                        </div>
-                        <p class="company">Colombia</p>
-                    </div>
-                </div>
-
-                <div class="de-lang language-content">
-                    <div class="education-item">
-                        <div class="job-title">
-                            <div class="job-title-text">Päpstliche Xaverianische Universität, Politikwissenschaft mit Schwerpunkt Politisches Marketing</div>
-                            <span class="date">1999-2004</span>
-                        </div>
-                        <p class="company">Kolumbien</p>
-                        <ul class="job-details">
-                            <li>Ehrenvolle Erwähnung für die Dissertation: "La Cruz, Nariño: Eine gefährdete Gemeinde, betroffen vom internen Konflikt"</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="job-title">
-                            <div class="job-title-text">Deutsche Schule</div>
-                            <span class="date">1992-1998</span>
-                        </div>
-                        <p class="company">Kolumbien</p>
-                    </div>
-                </div>
-
-                <h2 class="es-lang language-content active">Experiencia Adicional</h2>
-                <h2 class="en-lang language-content">Additional Experience</h2>
-                <h2 class="de-lang language-content">Zusätzliche Erfahrung</h2>
-
-                <div class="es-lang language-content active">
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Analista Voluntario, ONG Third World Network</div>
-                            <span class="date">2004</span>
-                        </div>
-                        <p class="company">Malasia</p>
-                        <ul class="job-details">
-                            <li>Análisis político de comunidades indígenas en Borneo</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Observador, Fuerza Multinacional y Observadores (FMO)</div>
-                            <span class="date">1998-1999</span>
-                        </div>
-                        <p class="company">Egipto</p>
-                        <ul class="job-details">
-                            <li>Contingente colombiano monitoreando acuerdo de paz entre Israel y Egipto</li>
-                            <li>Trabajando como miembro de la FMPU como responsable de la seguridad del Batallón en una zona de crisis en el Sinaí, Egipto</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Guardabosques Voluntario, Parque Nacional Natural de los Nevados</div>
-                            <span class="date">Junio-julio 1994</span>
-                        </div>
-                        <p class="company">Colombia</p>
-                        <ul class="job-details">
-                            <li>Apoyar a los Guardabosques responsables del funcionamiento y mantenimiento del Parque Natural</li>
-                            <li>Apoyar la construcción de insumos para la señalización del Parque y apoyar el control de visitantes</li>
-                            <li>Servir como consejero ambiental a los visitantes e instruir sobre el comportamiento adecuado en el Parque</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="en-lang language-content">
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Volunteer Analyst, Third World Network NGO</div>
-                            <span class="date">2004</span>
-                        </div>
-                        <p class="company">Malaysia</p>
-                        <ul class="job-details">
-                            <li>Political analysis of indigenous communities in Borneo</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Observer, Multinational Force and Observers (MFO)</div>
-                            <span class="date">1998-1999</span>
-                        </div>
-                        <p class="company">Egypt</p>
-                        <ul class="job-details">
-                            <li>Colombian contingent monitoring peace agreement between Israel and Egypt</li>
-                            <li>Working as a member of the FMPU as responsible for Battalion security in a crisis zone in Sinai, Egypt</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Volunteer Park Ranger, Los Nevados National Natural Park</div>
-                            <span class="date">June-July 1994</span>
-                        </div>
-                        <p class="company">Colombia</p>
-                        <ul class="job-details">
-                            <li>Support Park Rangers responsible for the operation and maintenance of the Natural Park</li>
-                            <li>Support the construction of materials for Park signage and assist with visitor control</li>
-                            <li>Serve as environmental counselor to visitors and instruct on proper behavior in the Park</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-lang language-content">
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Freiwilliger Analyst, NGO Third World Network</div>
-                            <span class="date">2004</span>
-                        </div>
-                        <p class="company">Malaysia</p>
-                        <ul class="job-details">
-                            <li>Politische Analyse indigener Gemeinschaften in Borneo</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Beobachter, Multinationale Truppe und Beobachter (MFO)</div>
-                            <span class="date">1998-1999</span>
-                        </div>
-                        <p class="company">Ägypten</p>
-                        <ul class="job-details">
-                            <li>Kolumbianisches Kontingent zur Überwachung des Friedensabkommens zwischen Israel und Ägypten</li>
-                            <li>Arbeit als Mitglied der FMPU als Verantwortlicher für die Sicherheit des Bataillons in einer Krisenzone im Sinai, Ägypten</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">
-                            <div class="job-title-text">Freiwilliger Parkranger, Nationalpark Los Nevados</div>
-                            <span class="date">Juni-Juli 1994</span>
-                        </div>
-                        <p class="company">Kolumbien</p>
-                        <ul class="job-details">
-                            <li>Unterstützung der Parkranger, die für den Betrieb und die Instandhaltung des Naturparks verantwortlich sind</li>
-                            <li>Unterstützung bei der Herstellung von Materialien für die Parkbeschilderung und Hilfe bei der Besucherkontrolle</li>
-                            <li>Als Umweltberater für Besucher fungieren und über angemessenes Verhalten im Park informieren</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="cv-header-right">
+            <img class="profile-img" src="https://images4.imagebam.com/c5/97/9d/ME11UR2W_o.jpg" alt="Nicolás Mayr profile photo">
         </div>
+    </header>
 
-        <!-- Footer Section -->
-        <footer class="cv-footer">
+    <div class="cv-body">
+        <!-- Left Column -->
+        <div class="left-column">
+            <h2 class="es-lang language-content active">Perfil</h2>
+            <h2 class="en-lang language-content">Profile</h2>
+            <h2 class="de-lang language-content">Profil</h2>
+
             <div class="es-lang language-content active">
-                CV actualizado en Mayo 2025 | Experiencia en Coordinación Humanitaria Internacional, Construcción de Paz y Desarrollo Local
+                <p>Politólogo con más de 19 años de experiencia, con experticia en análisis político, coordinación humanitaria e interinstitucional, construcción de paz y desarrollo local. Especialista en articulación entre comunidades indígenas/campesinas e instituciones gubernamentales, con enfoque en negociación, mediación y procesos multinivel. Amplia experiencia en la gestión de crisis humanitarias, evaluación de necesidades y creación de plataformas de coordinación interagencial en contextos de conflicto.</p>
             </div>
+
             <div class="en-lang language-content">
-                CV updated in May 2025 | Experience in International Humanitarian Coordination, Peacebuilding and Local Development
+                <p>Political scientist with over 19 years of experience, with expertise in political analysis, humanitarian and inter-institutional coordination, peacebuilding, and local development. Specialist in articulation between indigenous/rural communities and government institutions, with a focus on negotiation, mediation, and multilevel processes. Extensive experience in humanitarian crisis management, needs assessment, and creation of interagency coordination platforms in conflict contexts.</p>
+            </div>
+
+            <div class="de-lang language-content">
+                <p>Politikwissenschaftler mit über 19 Jahren Erfahrung, mit Expertise in politischer Analyse, humanitärer und interinstitutioneller Koordination, Friedenskonsolidierung und lokaler Entwicklung. Spezialist für die Artikulation zwischen indigenen/ländlichen Gemeinschaften und staatlichen Institutionen, mit Schwerpunkt auf Verhandlung, Vermittlung und Prozessen auf mehreren Ebenen. Umfangreiche Erfahrung im Management humanitärer Krisen, Bedarfsermittlung und Schaffung behördenübergreifender Koordinationsplattformen in Konfliktkontexten.</p>
+            </div>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bogotá, Colombia</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>31/10/1977</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+573205271621</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>nicomayro@gmail.com</span>
+                </div>
+            </div>
+
+            <h2 class="es-lang language-content active">Idiomas</h2>
+            <h2 class="en-lang language-content">Languages</h2>
+            <h2 class="de-lang language-content">Sprachen</h2>
+
+            <div class="es-lang language-content active">
+                <div class="language-item">
+                    <span><strong>Español:</strong> Nativo</span>
+                    <div class="language-level"><div class="level-bar native"></div></div>
+                </div>
+                <div class="language-item">
+                    <span><strong>Inglés:</strong> Fluido</span>
+                    <div class="language-level"><div class="level-bar fluent"></div></div>
+                </div>
+                <div class="language-item">
+                    <span><strong>Alemán:</strong> Fluido</span>
+                    <div class="language-level"><div class="level-bar fluent"></div></div>
+                </div>
+            </div>
+
+            <div class="en-lang language-content">
+                <div class="language-item">
+                    <span><strong>Spanish:</strong> Native</span>
+                    <div class="language-level"><div class="level-bar native"></div></div>
+                </div>
+                <div class="language-item">
+                    <span><strong>English:</strong> Fluent</span>
+                    <div class="language-level"><div class="level-bar fluent"></div></div>
+                </div>
+                <div class="language-item">
+                    <span><strong>German:</strong> Fluent</span>
+                    <div class="language-level"><div class="level-bar fluent"></div></div>
+                </div>
+            </div>
+
+            <div class="de-lang language-content">
+                <div class="language-item">
+                    <span><strong>Spanisch:</strong> Muttersprache</span>
+                    <div class="language-level"><div class="level-bar native"></div></div>
+                </div>
+                <div class="language-item">
+                    <span><strong>Englisch:</strong> Fließend</span>
+                    <div class="language-level"><div class="level-bar fluent"></div></div>
+                </div>
+                <div class="language-item">
+                    <span><strong>Deutsch:</strong> Fließend</span>
+                    <div class="language-level"><div class="level-bar fluent"></div></div>
+                </div>
+            </div>
+
+            <h2 class="es-lang language-content active">Habilidades</h2>
+            <h2 class="en-lang language-content">Skills</h2>
+            <h2 class="de-lang language-content">Fähigkeiten</h2>
+
+            <div class="es-lang language-content active">
+                <div class="skill-item">
+                    <span>Coordinación Humanitaria</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Análisis y Resolución de Conflictos</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Analista socio político del contexto latinoamericano, con especial énfasis en Colombia y Venezuela</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Cooperación Internacional</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Diplomacia Humanitaria</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Respuesta a Emergencias</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Gestión de Oficinas de Campo</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Evaluación de Necesidades</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Negociación con Comunidades</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Articulación Institucional</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Construcción de Paz</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Desarrollo Local</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+            </div>
+
+            <div class="en-lang language-content">
+                <div class="skill-item">
+                    <span>Humanitarian Coordination</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Conflict Analysis and Resolution</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Analyst of the socio-political context in Latin America, with special emphasis on Colombia and Venezuela</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                 <div class="skill-item">
+                    <span>International Cooperation</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Humanitarian Diplomacy</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Emergency Response</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Field Office Management</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Needs Assessment</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Community Negotiation</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Institutional Articulation</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Peacebuilding</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Local Development</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+            </div>
+
+            <div class="de-lang language-content">
+                <div class="skill-item">
+                    <span>Humanitäre Koordination</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Konfliktanalyse und -lösung</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Analyst für soziopolitische Kontexte in Lateinamerika, mit besonderem Schwerpunkt auf Kolumbien und Venezuela</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Internationale Zusammenarbeit</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Humanitäre Diplomatie</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Notfallmaßnahmen</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Feldbüroverwaltung</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Bedarfsbewertung</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Verhandlung mit Gemeinschaften</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Institutionelle Artikulation</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Friedenskonsolidierung</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Lokale Entwicklung</span>
+                    <div class="skill-level"><div class="level-bar expert"></div></div>
+                </div>
+            </div>
+
+            <h2 class="es-lang language-content active">Desarrollo Profesional</h2>
+            <h2 class="en-lang language-content">Professional Development</h2>
+            <h2 class="de-lang language-content">Berufliche Weiterbildung</h2>
+
+            <div class="es-lang language-content active">
+                <ul class="job-details">
+                    <li>Taller UNDAC (Lima, Perú, 2022)</li>
+                    <li>Coordinación a nivel subnacional (Luxemburgo, 2024)</li>
+                    <li>Punto focal de simulación SIMEX (Bogotá, 2016)</li>
+                    <li>Taller CAIM (Antigua, Guatemala, 2016)</li>
+                    <li>Capacitación UN-CMCoord (Ciudad de México, 2011)</li>
+                    <li>Programa de Coordinación Humanitaria en Campo (HFCP) (Jordania, 2009)</li>
+                    <li>Principios Sphera (Cartagena, Colombia, 2006)</li>
+                </ul>
+            </div>
+
+            <div class="en-lang language-content">
+                <ul class="job-details">
+                    <li>UNDAC Workshop (Lima, Peru, 2022)</li>
+                    <li>Coordination at subnational level (Luxembourg, 2024)</li>
+                    <li>SIMEX simulation focal point (Bogotá, 2016)</li>
+                    <li>CAIM Workshop (Antigua, Guatemala, 2016)</li>
+                    <li>UN-CMCoord training (Mexico City, 2011)</li>
+                    <li>Humanitarian Field Coordination Program (HFCP) (Jordan, 2009)</li>
+                    <li>Sphera principles (Cartagena, Colombia, 2006)</li>
+                </ul>
             </div>
             <div class="de-lang language-content">
-                CV aktualisiert im Mai 2025 | Erfahrung in Internationaler Humanitärer Koordination, Friedenskonsolidierung und Lokaler Entwicklung
+                <ul class="job-details">
+                    <li>UNDAC Workshop (Lima, Peru, 2022)</li>
+                    <li>Koordination auf subnationaler Ebene (Luxemburg, 2024)</li>
+                    <li>SIMEX-Simulationskoordinator (Bogotá, 2016)</li>
+                    <li>CAIM Workshop (Antigua, Guatemala, 2016)</li>
+                    <li>UN-CMCoord Schulung (Mexiko-Stadt, 2011)</li>
+                    <li>Humanitäres Feldkoordinationsprogramm (HFCP) (Jordanien, 2009)</li>
+                    <li>Sphera-Prinzipien (Cartagena, Kolumbien, 2006)</li>
+                </ul>
             </div>
-        </footer>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <h2 class="es-lang language-content active">Experiencia Laboral</h2>
+            <h2 class="en-lang language-content">Work Experience</h2>
+            <h2 class="de-lang language-content">Arbeitserfahrung</h2>
+
+            <div class="es-lang language-content active">
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Oficial de Asuntos Humanitarios</div>
+                        <span class="date">2020-presente</span>
+                    </div>
+                    <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de suboficina Maracaibo, Venezuela</p>
+                    <ul class="job-details">
+                        <li>Proporcionar análisis político continuo sobre la situación en Venezuela para informar la estrategia humanitaria y la toma de decisiones.</li>
+                        <li>Liderar la coordinación humanitaria en la región, asegurando una coordinación operativa hacia las comunidades más afectadas por la crisis social y política del país, garantizando la implementación efectiva del Plan de Respuesta Humanitaria</li>
+                        <li>Monitorear, analizar y articular con los espacios humanitarios a nivel local y nacional para garantizar una respuesta asertiva a las necesidades humanitarias en el Estado Zulia</li>
+                        <li>Fortalecer relaciones con autoridades locales y militares para mejorar el acceso humanitario y el entorno operativo para actores humanitarios</li>
+                        <li>Gestionar el equipo de campo de OCHA y monitores comunitarios en los estados de la región</li>
+                        <li>Desarrollar informes de análisis completos y productos de información para mejorar las estrategias de respuesta regional</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Oficial Nacional de Coordinación</div>
+                        <span class="date">2014-2020</span>
+                    </div>
+                    <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de la Unidad de coordinación, Bogotá, Colombia</p>
+                    <ul class="job-details">
+                        <li>Liderar el análisis político y de contexto para el Coordinador Humanitario y la oficina, identificando tendencias, riesgos y oportunidades para la acción humanitaria.</li>
+                        <li>Dirigir la Unidad de Coordinación de la oficina y supervisar las oficinas territoriales de OCHA</li>
+                        <li>Proporcionar análisis de situación estratégica y perspectivas políticas al Coordinador Humanitario</li>
+                        <li>Servir como punto focal para desastres naturales y emergencias humanitarias por conflicto, siendo el responsable del relacionamiento con los entes gubernamentales, las comunidades y los socios implementadores</li>
+                        <li>Actuar como enlace articulador entre las instituciones del Estado y las comunidades indígenas y campesinas para generar sinergias que permiten el actuar humanitario en territorios vulnerables</li>
+                        <li>Encargarse desde el lado humanitario, de la articulación entre el tema de migrantes y los desafíos humanitarios en Colombia. Constructor de la estrategia (plataforma nacional) entre temas de migración y humanitarios desde NNUU en el país</li>
+                        <li>Ejercer como jefe de Oficina de OCHA Colombia (e) durante 4 meses en 2019</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Oficial de Asuntos Humanitarios</div>
+                        <span class="date">2011-2013</span>
+                    </div>
+                    <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de suboficina Villavicencio, Colombia</p>
+                    <ul class="job-details">
+                        <li>Realizar análisis político de las dinámicas de conflicto y sociales en el suroriente colombiano para adaptar las estrategias de respuesta humanitaria y construcción de paz.</li>
+                        <li>Realizar la apertura y dirigir nuevas operaciones de oficina de OCHA en el suroriente de Colombia</li>
+                        <li>Crear equipos humanitarios locales en múltiples departamentos para mejorar el análisis y la respuesta a las comunidades afectadas del suroriente colombiano</li>
+                        <li>Proporcionar asistencia y articular con comunidades afectadas por desplazamiento debido al conflicto armado</li>
+                        <li>Generar pedagogías de Paz en comunidades indígenas y campesinas en áreas remotas del Meta y Guaviare, relacionada a los Diálogos entre gobierno y FARC-EP, conjuntamente con la Oficina de Derechos Humanos de las NNUU y la Defensoría del Pueblo</li>
+                        <li>Servir como experto en evaluaciones de necesidades humanitarias en varias comunidades indígenas y campesinas del Meta y Guaviare</li>
+                        <li>Establecer diálogos y enlaces entre entes gubernamentales y comunidades afectadas por el conflicto en el suroriente colombiano para generar acceso a atención humanitaria relevante</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Oficial Nacional de Coordinación</div>
+                        <span class="date">2008-2010</span>
+                    </div>
+                    <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de Suboficina Cartagena, Colombia</p>
+                    <ul class="job-details">
+                        <li>Proveer análisis político y de dinámicas de conflicto en la región Caribe para orientar la coordinación interagencial y las intervenciones humanitarias.</li>
+                        <li>Realizar la apertura y dirigir nuevas operaciones de oficina de OCHA en Bolívar para cubrir los departamentos de Sucre, Bolívar, Atlántico y Magdalena</li>
+                        <li>Coordinar la respuesta Interagencial en regiones afectadas por causa del conflicto armado en el país</li>
+                        <li>Implementar plataformas de coordinación humanitaria para agencias de la ONU en sus primeras fases de creación</li>
+                        <li>Servir como punto focal articulador entre la varias Agencias de la cooperación Internacional y los entes gubernamentales</li>
+                        <li>Realizar evaluaciones de necesidades y misiones de campo apoyando a comunidades vulnerables, especialmente comunidades campesinas de los departamentos de Bolívar y Sucre</li>
+                        <li>Apoyar las jornadas de consultas de paz realizadas en Bolívar y Sucre con comunidades Afrocolombianas, indígenas y campesinas ante escenarios de construcción de paz</li>
+                        <li>Realizar seguimiento y proponer acciones humanitarias de impacto en la región de los Montes de María en sus 14 municipios; zona afectada el conflicto armado en el país</li>
+                        <li>Realizar de la mano de comunidades y autoridades de gestión de riesgo, evaluaciones de necesidades y propuestas para canastas de recursos de las Naciones Unidas para implementar medidas de mitigación e impacto ante las emergencias crónicas por inundaciones en la Mojana sucreña</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Asistente de Coordinación Humanitaria</div>
+                        <span class="date">2005-2008</span>
+                    </div>
+                    <p class="company">Oficina de las Naciones Unidas para la Coordinación de Asuntos Humanitarios (OCHA), Jefe de la suboficina de Barranquilla, Atlántico</p>
+                    <ul class="job-details">
+                        <li>Contribuir con análisis político inicial del contexto de la costa norte para el establecimiento de operaciones de OCHA y la interacción con actores clave.</li>
+                        <li>Abrir la primera oficina de OCHA en la costa norte del país, en Barranquilla como Voluntario de la ONU para iniciar las operaciones de OCHA en esa parte del país</li>
+                        <li>Coordinar el inicio del trabajo humanitarios Interagencial de la ONU en el norte de Colombia</li>
+                        <li>Realizar, en las comunidades indígenas de la Sierra Nevada de Santa Marta, iniciativas y acuerdos entre las comunidades y la cooperación internacional para llevar a cabo un diagnóstico humanitario y generar acciones humanitarias con un impacto positivo en los pueblos Kogui-Wiwas-Kankuamos y Arhuacos</li>
+                        <li>Realizar un trabajo amplio de acompañamiento a los cuatro pueblos indígenas de la SNSM y generar sinergias y articulaciones entre éstos y los entes de gobierno para generar una respuesta ante temas de construcción de paz, desarrollo sostenible y asistencia humanitaria</li>
+                        <li>Monitorear y acompañar las acciones humanitarias en las comunidades que experimentaban desplazamiento a lo largo de la frontera colombo-venezolana, tanto campesinas como indígenas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="en-lang language-content">
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Humanitarian Affairs Officer</div>
+                        <span class="date">2020-present</span>
+                    </div>
+                    <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Maracaibo Sub-office, Venezuela</p>
+                    <ul class="job-details">
+                        <li>Provide continuous political analysis on the situation in Venezuela to inform humanitarian strategy and decision-making.</li>
+                        <li>Lead humanitarian coordination in the region, ensuring operational coordination for communities most affected by the country's social and political crisis, guaranteeing effective implementation of the Humanitarian Response Plan</li>
+                        <li>Monitor, analyze and articulate with humanitarian spaces at local and national levels to ensure an assertive response to humanitarian needs in Zulia State</li>
+                        <li>Strengthen relationships with local authorities and military to improve humanitarian access and operational environment for humanitarian actors</li>
+                        <li>Manage OCHA field team and community monitors across regional states</li>
+                        <li>Develop comprehensive analysis reports and information products to enhance regional response strategies</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">National Coordination Officer</div>
+                        <span class="date">2014-2020</span>
+                    </div>
+                    <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Coordination Unit, Bogotá, Colombia</p>
+                    <ul class="job-details">
+                        <li>Lead political and contextual analysis for the Humanitarian Coordinator and the office, identifying trends, risks, and opportunities for humanitarian action.</li>
+                        <li>Lead the Coordination Unit of the office and supervise OCHA territorial offices</li>
+                        <li>Provide strategic situation analysis and political perspectives to the Humanitarian Coordinator</li>
+                        <li>Serve as focal point for natural disasters and conflict humanitarian emergencies, responsible for relationships with government entities, communities, and implementing partners</li>
+                        <li>Act as articulating link between State institutions and indigenous and rural communities to generate synergies that enable humanitarian action in vulnerable territories</li>
+                        <li>Manage, from the humanitarian side, the articulation between migrant issues and humanitarian challenges in Colombia. Builder of strategy (national platform) between migration and humanitarian issues from UN in the country</li>
+                        <li>Serve as OCHA Colombia Head of Office (acting) for 4 months in 2019</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Humanitarian Affairs Officer</div>
+                        <span class="date">2011-2013</span>
+                    </div>
+                    <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Villavicencio Sub-office, Colombia</p>
+                    <ul class="job-details">
+                        <li>Conduct political analysis of conflict and social dynamics in southeastern Colombia to adapt humanitarian response and peacebuilding strategies.</li>
+                        <li>Establish and lead new OCHA office operations in southeastern Colombia</li>
+                        <li>Create local humanitarian teams across multiple departments to enhance analysis and response to affected communities in southeastern Colombia</li>
+                        <li>Provide assistance and articulate with communities affected by displacement due to armed conflict</li>
+                        <li>Generate Peace pedagogies in indigenous and rural communities in remote areas of Meta and Guaviare, related to the Dialogues between government and FARC-EP, jointly with the UN Human Rights Office and the Ombudsman's Office</li>
+                        <li>Serve as expert in humanitarian needs assessments in various indigenous and rural communities of Meta and Guaviare</li>
+                        <li>Establish dialogues and links between government entities and communities affected by conflict in southeastern Colombia to generate access to relevant humanitarian assistance</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">National Coordination Officer</div>
+                        <span class="date">2008-2010</span>
+                    </div>
+                    <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Cartagena Sub-office, Colombia</p>
+                    <ul class="job-details">
+                        <li>Provide political and conflict dynamics analysis in the Caribbean region to guide interagency coordination and humanitarian interventions.</li>
+                        <li>Establish and lead new OCHA office operations in Bolívar to cover the departments of Sucre, Bolívar, Atlántico and Magdalena</li>
+                        <li>Coordinate interagency response in regions affected by armed conflict in the country</li>
+                        <li>Implement humanitarian coordination platforms for UN agencies in their early phases of creation</li>
+                        <li>Serve as articulating focal point between various International Cooperation Agencies and government entities</li>
+                        <li>Conduct needs assessments and field missions supporting vulnerable communities, especially rural communities in the departments of Bolívar and Sucre</li>
+                        <li>Support peace consultation days held in Bolívar and Sucre with Afro- Colombian, indigenous, and rural communities in peacebuilding scenarios</li>
+                        <li>Monitor and propose impactful humanitarian actions in the Montes de María region in its 14 municipalities; area affected by armed conflict in the country</li>
+                        <li>Conduct, together with communities and risk management authorities, needs assessments and proposals for United Nations resource baskets to implement mitigation and impact measures for chronic flood emergencies in Mojana sucreña</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Humanitarian Coordination Assistant</div>
+                        <span class="date">2005-2008</span>
+                    </div>
+                    <p class="company">UN Office for the Coordination of Humanitarian Affairs (OCHA), Head of Barranquilla Sub-office, Atlántico</p>
+                    <ul class="job-details">
+                        <li>Contribute with initial political analysis of the northern coast context for the establishment of OCHA operations and interaction with key stakeholders.</li>
+                        <li>Open the first OCHA office on the northern coast of the country in Barranquilla as UN Volunteer to initiate OCHA operations in that part of the country</li>
+                        <li>Coordinate the beginning of UN interagency humanitarian work in northern Colombia</li>
+                        <li>Develop, in the indigenous communities of Sierra Nevada de Santa Marta, initiatives and agreements between communities and international cooperation to conduct a humanitarian diagnosis and generate humanitarian actions with positive impact on Kogui-Wiwas-Kankuamos and Arhuacos peoples</li>
+                        <li>Conduct extensive accompaniment work with the four indigenous peoples of the SNSM and generate synergies and articulations between them and government entities to generate a response to peacebuilding, sustainable development, and humanitarian assistance issues</li>
+                        <li>Monitor and accompany humanitarian actions in communities experiencing displacement along the Colombian-Venezuelan border, both rural and indigenous</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="de-lang language-content">
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Humanitärer Referent</div>
+                        <span class="date">2020-heute</span>
+                    </div>
+                    <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Maracaibo, Venezuela</p>
+                    <ul class="job-details">
+                        <li>Bereitstellung kontinuierlicher politischer Analysen zur Lage in Venezuela zur Information der humanitären Strategie und Entscheidungsfindung.</li>
+                        <li>Humanitäre Koordination in der Region leiten, operative Koordination für die am stärksten von der sozialen und politischen Krise des Landes betroffenen Gemeinschaften sicherstellen und den Humanitären Reaktionsplan effektiv umsetzen</li>
+                        <li>Humanitäre Entwicklungen auf lokaler und nationaler Ebene überwachen, analysieren und artikulieren, um eine durchsetzungsfähige Reaktion auf humanitäre Bedürfnisse im Bundesstaat Zulia zu gewährleisten</li>
+                        <li>Beziehungen zu lokalen Behörden und Militär stärken, um den humanitären Zugang und das operative Umfeld für humanitäre Akteure zu verbessern</li>
+                        <li>OCHA-Feldteam und Community-Monitore in den regionalen Bundesstaaten verwalten</li>
+                        <li>Umfassende Analyseberichte und Informationsprodukte entwickeln, um regionale Reaktionsstrategien zu verbessern</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Nationaler Koordinationsbeauftragter</div>
+                        <span class="date">2014-2020</span>
+                    </div>
+                    <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter der Koordinierungseinheit, Bogotá, Kolumbien</p>
+                    <ul class="job-details">
+                        <li>Leitung politischer und kontextbezogener Analysen für den Humanitären Koordinator und das Büro, Identifizierung von Trends, Risiken und Chancen für humanitäre Maßnahmen.</li>
+                        <li>Die Koordinierungseinheit des Büros leiten und die territorialen OCHA-Büros beaufsichtigen</li>
+                        <li>Strategische Situationsanalyse und politische Perspektiven für den Humanitären Koordinator bereitstellen</li>
+                        <li>Als Anlaufstelle für Naturkatastrophen und humanitäre Konfliktsituationen fungieren, verantwortlich für Beziehungen zu Regierungsbehörden, Gemeinschaften und Durchführungspartnern</li>
+                        <li>Als verbindendes Glied zwischen staatlichen Institutionen und indigenen und ländlichen Gemeinschaften fungieren, um Synergien zu erzeugen, die humanitäres Handeln in gefährdeten Gebieten ermöglichen</li>
+                        <li>Von der humanitären Seite die Artikulation zwischen Migrationsfragen und humanitären Herausforderungen in Kolumbien verwalten. Gestalter der Strategie (nationale Plattform) zwischen Migrations- und humanitären Themen der UN im Land</li>
+                        <li>Als Leiter des OCHA-Büros Kolumbien (amtierend) für 4 Monate im Jahr 2019 fungieren</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Humanitärer Referent</div>
+                        <span class="date">2011-2013</span>
+                    </div>
+                    <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Villavicencio, Kolumbien</p>
+                    <ul class="job-details">
+                        <li>Durchführung politischer Analysen von Konflikt- und Sozialdynamiken im Südosten Kolumbiens zur Anpassung humanitärer Reaktions- und Friedenskonsolidierungsstrategien.</li>
+                        <li>Neue OCHA-Bürooperationen im Südosten Kolumbiens einrichten und leiten</li>
+                        <li>Lokale humanitäre Teams in mehreren Abteilungen schaffen, um Analyse und Reaktion auf betroffene Gemeinschaften im südöstlichen Kolumbien zu verbessern</li>
+                        <li>Hilfestellung leisten und mit Gemeinschaften artikulieren, die von Vertreibung aufgrund bewaffneter Konflikte betroffen sind</li>
+                        <li>Friedenspädagogik in indigenen und ländlichen Gemeinschaften in abgelegenen Gebieten von Meta und Guaviare entwickeln, im Zusammenhang mit den Dialogen zwischen Regierung und FARC-EP, gemeinsam mit dem UN-Menschenrechtsbüro und dem Büro des Ombudsmanns</li>
+                        <li>Als Experte für humanitäre Bedarfsermittlungen in verschiedenen indigenen und ländlichen Gemeinschaften von Meta und Guaviare fungieren</li>
+                        <li>Dialoge und Verbindungen zwischen Regierungsbehörden und von Konflikten betroffenen Gemeinschaften im südöstlichen Kolumbien herstellen, um Zugang zu relevanter humanitärer Hilfe zu ermöglichen</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Nationaler Koordinationsbeauftragter</div>
+                        <span class="date">2008-2010</span>
+                    </div>
+                    <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Cartagena, Kolumbien</p>
+                    <ul class="job-details">
+                        <li>Bereitstellung politischer Analysen und Analysen von Konfliktdynamiken in der Karibikregion zur Steuerung der behördenübergreifenden Koordination und humanitärer Interventionen.</li>
+                        <li>Neue OCHA-Bürooperationen in Bolívar einrichten und leiten, um die Departements Sucre, Bolívar, Atlántico und Magdalena abzudecken</li>
+                        <li>Behördenübergreifende Reaktion in von bewaffneten Konflikten betroffenen Regionen des Landes koordinieren</li>
+                        <li>Humanitäre Koordinationsplattformen für UN-Organisationen in ihren frühen Schaffungsphasen implementieren</li>
+                        <li>Als artikulierender Ansprechpartner zwischen verschiedenen Agenturen der internationalen Zusammenarbeit und Regierungsbehörden fungieren</li>
+                        <li>Bedarfsermittlungen und Feldmissionen zur Unterstützung gefährdeter Gemeinschaften durchführen, insbesondere ländlicher Gemeinschaften in den Departements Bolívar und Sucre</li>
+                        <li>Friedenskonsultationstage in Bolívar und Sucre mit afro-kolumbianischen, indigenen und ländlichen Gemeinschaften in Friedenskonsolidierungsszenarien unterstützen</li>
+                        <li>Humanitäre Maßnahmen mit Wirkung in der Region Montes de María und ihren 14 Gemeinden überwachen und vorschlagen; ein vom bewaffneten Konflikt im Land betroffenes Gebiet</li>
+                        <li>Gemeinsam mit Gemeinschaften und Risikomanagementbehörden Bedarfsermittlungen und Vorschläge für Ressourcenkörbe der Vereinten Nationen durchführen, um Minderungs- und Auswirkungsmaßnahmen für chronische Überschwemmungsnotfälle in der Mojana sucreña umzusetzen</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Humanitärer Koordinationsassistent</div>
+                        <span class="date">2005-2008</span>
+                    </div>
+                    <p class="company">Büro der Vereinten Nationen für die Koordinierung humanitärer Angelegenheiten (OCHA), Leiter des Unterbüros Barranquilla, Atlántico</p>
+                    <ul class="job-details">
+                        <li>Beitrag zur initialen politischen Analyse des Kontextes der Nordküste für den Aufbau von OCHA-Operationen und die Interaktion mit Schlüsselakteuren.</li>
+                        <li>Das erste OCHA-Büro an der Nordküste des Landes in Barranquilla als UN-Freiwilliger eröffnen, um OCHA-Operationen in diesem Teil des Landes zu initiieren</li>
+                        <li>Den Beginn der behördenübergreifenden humanitären Arbeit der UN in Nordkolumbien koordinieren</li>
+                        <li>In den indigenen Gemeinschaften der Sierra Nevada de Santa Marta Initiativen und Vereinbarungen zwischen Gemeinschaften und internationaler Zusammenarbeit entwickeln, um eine humanitäre Diagnose durchzuführen und humanitäre Maßnahmen mit positiver Wirkung auf die Völker der Kogui-Wiwas-Kankuamos und Arhuacos zu generieren</li>
+                        <li>Umfangreiche Begleitarbeit mit den vier indigenen Völkern der SNSM durchführen und Synergien und Artikulationen zwischen ihnen und Regierungsbehörden erzeugen, um eine Antwort auf Themen der Friedenskonsolidierung, nachhaltigen Entwicklung und humanitären Hilfe zu generieren</li>
+                        <li>Humanitäre Maßnahmen in Gemeinschaften überwachen und begleiten, die Vertreibung entlang der kolumbianisch-venezolanischen Grenze erleben, sowohl ländlich als auch indigen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 class="es-lang language-content active">Educación</h2>
+            <h2 class="en-lang language-content">Education</h2>
+            <h2 class="de-lang language-content">Ausbildung</h2>
+
+            <div class="es-lang language-content active">
+                <div class="education-item">
+                    <div class="job-title">
+                        <div class="job-title-text">Pontificia Universidad Javeriana, Ciencias Políticas con énfasis en Marketing político</div>
+                        <span class="date">1999-2004</span>
+                    </div>
+                    <p class="company">Colombia</p>
+                    <ul class="job-details">
+                        <li>Mención honorífica por tesis: "La Cruz, Nariño: Un municipio vulnerable afectado por el conflicto interno"</li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-title">
+                        <div class="job-title-text">Colegio Alemán</div>
+                        <span class="date">1992-1998</span>
+                    </div>
+                    <p class="company">Colombia</p>
+                </div>
+            </div>
+
+            <div class="en-lang language-content">
+                <div class="education-item">
+                    <div class="job-title">
+                        <div class="job-title-text">Pontificia Universidad Javeriana, Political Science with emphasis in Political Marketing</div>
+                        <span class="date">1999-2004</span>
+                    </div>
+                    <p class="company">Colombia</p>
+                    <ul class="job-details">
+                        <li>Honorific mention for thesis: "La Cruz, Nariño: A vulnerable municipality affected by the internal conflict"</li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-title">
+                        <div class="job-title-text">German School</div>
+                        <span class="date">1992-1998</span>
+                    </div>
+                    <p class="company">Colombia</p>
+                </div>
+            </div>
+
+            <div class="de-lang language-content">
+                <div class="education-item">
+                    <div class="job-title">
+                        <div class="job-title-text">Päpstliche Xaverianische Universität, Politikwissenschaft mit Schwerpunkt Politisches Marketing</div>
+                        <span class="date">1999-2004</span>
+                    </div>
+                    <p class="company">Kolumbien</p>
+                    <ul class="job-details">
+                        <li>Ehrenvolle Erwähnung für die Dissertation: "La Cruz, Nariño: Eine gefährdete Gemeinde, betroffen vom internen Konflikt"</li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-title">
+                        <div class="job-title-text">Deutsche Schule</div>
+                        <span class="date">1992-1998</span>
+                    </div>
+                    <p class="company">Kolumbien</p>
+                </div>
+            </div>
+
+            <h2 class="es-lang language-content active">Experiencia Adicional</h2>
+            <h2 class="en-lang language-content">Additional Experience</h2>
+            <h2 class="de-lang language-content">Zusätzliche Erfahrung</h2>
+
+            <div class="es-lang language-content active">
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Analista Voluntario, ONG Third World Network</div>
+                        <span class="date">2004</span>
+                    </div>
+                    <p class="company">Malasia</p>
+                    <ul class="job-details">
+                        <li>Análisis político de comunidades indígenas en Borneo</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Observador, Fuerza Multinacional y Observadores (FMO)</div>
+                        <span class="date">1998-1999</span>
+                    </div>
+                    <p class="company">Egipto</p>
+                    <ul class="job-details">
+                        <li>Contingente colombiano monitoreando acuerdo de paz entre Israel y Egipto</li>
+                        <li>Trabajando como miembro de la FMPU como responsable de la seguridad del Batallón en una zona de crisis en el Sinaí, Egipto</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Guardabosques Voluntario, Parque Nacional Natural de los Nevados</div>
+                        <span class="date">Junio-julio 1994</span>
+                    </div>
+                    <p class="company">Colombia</p>
+                    <ul class="job-details">
+                        <li>Apoyar a los Guardabosques responsables del funcionamiento y mantenimiento del Parque Natural</li>
+                        <li>Apoyar la construcción de insumos para la señalización del Parque y apoyar el control de visitantes</li>
+                        <li>Servir como consejero ambiental a los visitantes e instruir sobre el comportamiento adecuado en el Parque</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="en-lang language-content">
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Volunteer Analyst, Third World Network NGO</div>
+                        <span class="date">2004</span>
+                    </div>
+                    <p class="company">Malaysia</p>
+                    <ul class="job-details">
+                        <li>Political analysis of indigenous communities in Borneo</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Observer, Multinational Force and Observers (MFO)</div>
+                        <span class="date">1998-1999</span>
+                    </div>
+                    <p class="company">Egypt</p>
+                    <ul class="job-details">
+                        <li>Colombian contingent monitoring peace agreement between Israel and Egypt</li>
+                        <li>Working as a member of the FMPU as responsible for Battalion security in a crisis zone in Sinai, Egypt</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Volunteer Park Ranger, Los Nevados National Natural Park</div>
+                        <span class="date">June-July 1994</span>
+                    </div>
+                    <p class="company">Colombia</p>
+                    <ul class="job-details">
+                        <li>Support Park Rangers responsible for the operation and maintenance of the Natural Park</li>
+                        <li>Support the construction of materials for Park signage and assist with visitor control</li>
+                        <li>Serve as environmental counselor to visitors and instruct on proper behavior in the Park</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="de-lang language-content">
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Freiwilliger Analyst, NGO Third World Network</div>
+                        <span class="date">2004</span>
+                    </div>
+                    <p class="company">Malaysia</p>
+                    <ul class="job-details">
+                        <li>Politische Analyse indigener Gemeinschaften in Borneo</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Beobachter, Multinationale Truppe und Beobachter (MFO)</div>
+                        <span class="date">1998-1999</span>
+                    </div>
+                    <p class="company">Ägypten</p>
+                    <ul class="job-details">
+                        <li>Kolumbianisches Kontingent zur Überwachung des Friedensabkommens zwischen Israel und Ägypten</li>
+                        <li>Arbeit als Mitglied der FMPU als Verantwortlicher für die Sicherheit des Bataillons in einer Krisenzone im Sinai, Ägypten</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">
+                        <div class="job-title-text">Freiwilliger Parkranger, Nationalpark Los Nevados</div>
+                        <span class="date">Juni-Juli 1994</span>
+                    </div>
+                    <p class="company">Kolumbien</p>
+                    <ul class="job-details">
+                        <li>Unterstützung der Parkranger, die für den Betrieb und die Instandhaltung des Naturparks verantwortlich sind</li>
+                        <li>Unterstützung bei der Herstellung von Materialien für die Parkbeschilderung und Hilfe bei der Besucherkontrolle</li>
+                        <li>Als Umweltberater für Besucher fungieren und über angemessenes Verhalten im Park informieren</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- References Section -->
+            <div class="references-section">
+                <h2 class="es-lang language-content active">Referencias</h2>
+                <h2 class="en-lang language-content">References</h2>
+                <h2 class="de-lang language-content">Referenzen</h2>
+
+                <div class="es-lang language-content active">
+                    <div class="reference-item">
+                        <p class="company">Gerard Gomez</p>
+                        <p class="company">Ex jefe Oficina de Coordinación de Asuntos Humanitarios OCHA Colombia.</p>
+                        <p class="company">email: <a href="mailto:gomezoffice01@gmail.com">gomezoffice01@gmail.com</a></p>
+                        <p class="company">tel: 33671498210</p>
+                    </div>
+                    <div class="reference-item">
+                        <p class="company">Chiara Capozio</p>
+                        <p class="company">Regional Advisor, OCHA Regional Office for Latin America and the Caribbean, Panama City.</p>
+                        <p class="company">email: <a href="mailto:capozio@un.org">capozio@un.org</a></p>
+                        <p class="company">tel: +50768856136</p>
+                    </div>
+                    <div class="reference-item">
+                        <p class="company">Luigi Nicoletti</p>
+                        <p class="company">Humanitarian Affairs Officer, System Wide Approaches and Practices, OCHA Istanbul.</p>
+                        <p class="company">email: <a href="mailto:Mr.luigi.nicoletti@gmail.com">Mr.luigi.nicoletti@gmail.com</a></p>
+                        <p class="company">tel: 905380978390</p>
+                    </div>
+                </div>
+
+                <div class="en-lang language-content">
+                    <div class="reference-item">
+                        <p class="company">Gerard Gomez</p>
+                        <p class="company">Former Head of the UN Office for the Coordination of Humanitarian Affairs OCHA Colombia.</p>
+                        <p class="company">email: <a href="mailto:gomezoffice01@gmail.com">gomezoffice01@gmail.com</a></p>
+                        <p class="company">phone: 33671498210</p>
+                    </div>
+                    <div class="reference-item">
+                        <p class="company">Chiara Capozio</p>
+                        <p class="company">Regional Advisor, OCHA Regional Office for Latin America and the Caribbean, Panama City.</p>
+                        <p class="company">email: <a href="mailto:capozio@un.org">capozio@un.org</a></p>
+                        <p class="company">phone: +50768856136</p>
+                    </div>
+                    <div class="reference-item">
+                        <p class="company">Luigi Nicoletti</p>
+                        <p class="company">Humanitarian Affairs Officer, System Wide Approaches and Practices, OCHA Istanbul.</p>
+                        <p class="company">email: <a href="mailto:Mr.luigi.nicoletti@gmail.com">Mr.luigi.nicoletti@gmail.com</a></p>
+                        <p class="company">phone: 905380978390</p>
+                    </div>
+                </div>
+
+                <div class="de-lang language-content">
+                    <div class="reference-item">
+                        <p class="company">Gerard Gomez</p>
+                        <p class="company">Ehemaliger Leiter des Büros für die Koordinierung humanitärer Angelegenheiten OCHA Kolumbien.</p>
+                        <p class="company">email: <a href="mailto:gomezoffice01@gmail.com">gomezoffice01@gmail.com</a></p>
+                        <p class="company">tel: 33671498210</p>
+                    </div>
+                    <div class="reference-item">
+                        <p class="company">Chiara Capozio</p>
+                        <p class="company">Regional Advisor, OCHA Regional Office for Latin America and the Caribbean, Panama City.</p>
+                        <p class="company">email: <a href="mailto:capozio@un.org">capozio@un.org</a></p>
+                        <p class="company">tel: +50768856136</p>
+                    </div>
+                    <div class="reference-item">
+                        <p class="company">Luigi Nicoletti</p>
+                        <p class="company">Humanitarian Affairs Officer, System Wide Approaches and Practices, OCHA Istanbul.</p>
+                        <p class="company">email: <a href="mailto:Mr.luigi.nicoletti@gmail.com">Mr.luigi.nicoletti@gmail.com</a></p>
+                        <p class="company">tel: 905380978390</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const spanishBtn = document.getElementById('btn-es');
-            const englishBtn = document.getElementById('btn-en');
-            const deutschBtn = document.getElementById('btn-de'); // Define deutschBtn here
+    <!-- Footer Section -->
+    <footer class="cv-footer">
+        <div class="es-lang language-content active">
+            CV actualizado en Julio 2025 | Experiencia en Coordinación Humanitaria Internacional, Construcción de Paz y Desarrollo Local
+        </div>
+        <div class="en-lang language-content">
+            CV updated in July 2025 | Experience in International Humanitarian Coordination, Peacebuilding and Local Development
+        </div>
+        <div class="de-lang language-content">
+            CV aktualisiert im Juli 2025 | Erfahrung in Internationaler Humanitärer Koordination, Friedenskonsolidierung und Lokaler Entwicklung
+        </div>
+    </footer>
+</div>
 
-            const spanishContent = document.querySelectorAll('.es-lang');
-            const englishContent = document.querySelectorAll('.en-lang');
-            const deutschContent = document.querySelectorAll('.de-lang'); // Define deutschContent here
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const spanishBtn = document.getElementById('btn-es');
+        const englishBtn = document.getElementById('btn-en');
+        const deutschBtn = document.getElementById('btn-de');
 
-            function setActiveLanguage(activeBtn, activeContent, inactiveBtns, inactiveContents) {
-                activeBtn.classList.add('active');
-                activeContent.forEach(item => item.classList.add('active'));
+        const spanishContent = document.querySelectorAll('.es-lang');
+        const englishContent = document.querySelectorAll('.en-lang');
+        const deutschContent = document.querySelectorAll('.de-lang');
 
-                inactiveBtns.forEach(btn => btn.classList.remove('active'));
-                inactiveContents.forEach(contentList => {
-                    contentList.forEach(item => item.classList.remove('active'));
-                });
-            }
+        function setActiveLanguage(activeBtn, activeContent, inactiveBtns, inactiveContents) {
+            activeBtn.classList.add('active');
+            activeContent.forEach(item => item.classList.add('active'));
 
-            spanishBtn.addEventListener('click', function() {
-                setActiveLanguage(spanishBtn, spanishContent, [englishBtn, deutschBtn], [englishContent, deutschContent]);
+            inactiveBtns.forEach(btn => btn.classList.remove('active'));
+            inactiveContents.forEach(contentList => {
+                contentList.forEach(item => item.classList.remove('active'));
             });
+        }
 
-            englishBtn.addEventListener('click', function() {
-                setActiveLanguage(englishBtn, englishContent, [spanishBtn, deutschBtn], [spanishContent, deutschContent]);
-            });
-
-            deutschBtn.addEventListener('click', function() {
-                setActiveLanguage(deutschBtn, deutschContent, [spanishBtn, englishBtn], [spanishContent, englishContent]);
-            });
+        spanishBtn.addEventListener('click', function() {
+            setActiveLanguage(spanishBtn, spanishContent, [englishBtn, deutschBtn], [englishContent, deutschContent]);
         });
-    </script>
 
+        englishBtn.addEventListener('click', function() {
+            setActiveLanguage(englishBtn, englishContent, [spanishBtn, deutschBtn], [spanishContent, deutschContent]);
+        });
+
+        deutschBtn.addEventListener('click', function() {
+            setActiveLanguage(deutschBtn, deutschContent, [spanishBtn, englishBtn], [spanishContent, englishContent]);
+        });
+    });
+</script>
 </body></html>
